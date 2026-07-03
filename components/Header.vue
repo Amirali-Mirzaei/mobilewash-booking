@@ -16,7 +16,11 @@ import { NuxtLink } from '../.nuxt/components';
            <span>AR</span> Mobilewash
           </h1>
 
-          <p>WE BRING THE SHINE TO YOU</p>
+          <p>
+            <i>
+            WE BRING THE SHINE TO YOU
+           </i>
+         </p>
 
         </div>
 
@@ -25,7 +29,7 @@ import { NuxtLink } from '../.nuxt/components';
 
       <nav class="nav">
 
-        <NuxtLink to="/" class="nav-item active">
+        <NuxtLink to="/" :class="['nav-item', { active: isActive('/') }]">
           <Icon
             name="lucide:house"
             size="20"
@@ -33,7 +37,7 @@ import { NuxtLink } from '../.nuxt/components';
           <span>Home</span>
         </NuxtLink>
 
-        <NuxtLink to="/contact" class="nav-item active">
+        <NuxtLink to="/contact" :class="['nav-item', { active: isActive('/contact') }]">
           <Icon
             name="lucide:phone"
             size="20"
@@ -81,15 +85,13 @@ const isActive = (path: string) => route.path === path
 
 .header{
     position:fixed;
-    inset:0 0 auto 0;
-    width:100%;
-    height:95px;
-    z-index:9999;
-    overflow:hidden;
-    background:rgba(6,6,8,.78);
-    backdrop-filter:blur(32px);
-    -webkit-backdrop-filter:blur(32px);
-    border-bottom:1px solid rgba(255,215,0,.15);
+    inset: 0 0 auto 0;
+    width: 100%;
+    height: 95px;
+    z-index: 9999;
+    overflow: hidden;
+    background: $secondry;
+    border-bottom: $primary;
 }
 
 .header-bg{
@@ -100,15 +102,15 @@ const isActive = (path: string) => route.path === path
 }
 
 .container{
-    position:relative;
-    z-index:10;
-    max-width:1450px;
-    height:100%;
-    margin:auto;
-    padding:0 45px;
-    display:flex;
+    position: relative;
+    z-index: 10;
+    max-width: 1450px;
+    height: 100%;
+    margin-left: 3%;
+    padding: 0 45px;
+    display: flex;
     justify-content:space-between;
-    align-items:center;
+    align-items: center;
 }
 
 p {
@@ -129,10 +131,10 @@ font-weight: 900;
 }
 
 .logo-text h1{
-    font-size:3rem;
-    line-height:1;
-    font-weight:800;
-    letter-spacing:.5px;
+    font-size: 5vh;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: .5px;
     color:white;
 }
 
@@ -141,9 +143,9 @@ font-weight: 900;
 }
 
 .logo-text p{
-    margin-top:6px;
+    margin-top: 6px;
     color:#9f9f9f;
-    font-size:.72rem;
+    font-size: .72rem;
     letter-spacing:4px;
 
 }
@@ -173,7 +175,7 @@ font-weight: 900;
 }
 
 .nav-item:hover{
-    color:white;
+    color: white;
     transform:translateY(-2px);
 }
 
@@ -202,7 +204,7 @@ font-weight: 900;
     linear-gradient(
         135deg,
         $primary-light 0%,
-        $primary-light 35%,
+        $primary 35%,
         $primary 100%
     );
     transition:.35s;
@@ -240,7 +242,7 @@ font-weight: 900;
 }
 
 .booking-btn:hover .shine{
-    animation:shine 1.1s ease;
+    animation: shine 1.1s ease;
 }
 
 @keyframes shine{

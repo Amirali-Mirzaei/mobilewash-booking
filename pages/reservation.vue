@@ -189,7 +189,7 @@ gap: 12px;
 
 .weekday {
 text-align: center;
-color: $priamry;
+color: $primary;
 font-weight: 600;
 }
 </style>

@@ -18,9 +18,8 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/mongoose": "^5.11.96",
     "@types/node": "^26.1.0",
     "sass-embedded": "^1.100.0",
-    "typescript": "^6.0.3"
+    "typescript": "^5.9.2"
   }
 }

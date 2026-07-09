@@ -1,75 +1,91 @@
-# Nuxt Minimal Starter
+# 🚘 Mobile Wash Booking
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern booking system for a mobile car wash service built with **Nuxt 4**, **Vue 3**, **MongoDB Atlas**, and **Telegram Bot API**.
 
-## Setup
+The project focuses on providing a fast, secure, and user-friendly booking experience for customers while instantly notifying administrators through Telegram.
 
-Make sure to install dependencies:
+---
+
+## ✨ Features
+
+- 🚘 Online appointment booking
+- 📅 Date & time scheduling
+- 🔒 Server-side validation with Zod
+- 🛡️ Rate limiting against spam requests
+- 🚫 Duplicate booking prevention
+- 📩 Instant Telegram notifications
+- ☁️ MongoDB Atlas integration
+- ⚡ Built with Nuxt 4 & Vue 3
+- 🎨 Responsive modern UI
+
+---
+
+## 🛠 Tech Stack
+
+- Nuxt 4
+- Vue 3
+- TypeScript
+- MongoDB Atlas
+- Mongoose
+- Zod
+- Telegram Bot API
+- SCSS
+
+---
+
+## 📦 Installation
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+## 🚀 Run Development Server
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The application will be available at:
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```
+http://localhost:3000
 ```
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
+## 🔐 Security
 
-# pnpm
-pnpm preview
+This project includes several security measures:
 
-# yarn
-yarn preview
+- Server-side request validation
+- Duplicate booking protection
+- HTML escaping before sending Telegram messages
+- Basic rate limiting
+- Secure environment variables
 
-# bun
-bun run preview
-```
+---
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### 🚧 Coming Soon
+
+- Full Home Page
+- Services Page
+- About Us
+- Contact Page
+- Email Confirmation
+- Admin Dashboard
+
+---
+
+## 📄 License
+
+This project is developed for educational and portfolio purposes.
+
+---
+
+## 👨‍💻 Developer
+
+**Amirali Mirzaei**
+
+Frontend Developer

@@ -31,4 +31,4 @@ export const bookingSchema = z.object({
 
     time: z.string()
 
-});
+}); 

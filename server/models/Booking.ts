@@ -1,4 +1,6 @@
-import { Schema, model, models, InferSchemaType } from "mongoose";
+import mongoose from "mongoose";
+
+const { Schema, model, models } = mongoose;
 
 const BookingSchema = new Schema(
   {
@@ -17,7 +19,6 @@ const BookingSchema = new Schema(
     phone: {
       type: String,
       required: true,
-      trim: true,
       index: true,
     },
 
@@ -43,14 +44,12 @@ const BookingSchema = new Schema(
       type: String,
       enum: ["pending", "cancelled"],
       default: "pending",
-      index: true,
     },
 
     cancelToken: {
       type: String,
       required: true,
       unique: true,
-      index: true,
     },
   },
   {
@@ -68,9 +67,7 @@ BookingSchema.index(
   }
 );
 
-export type BookingDocument = InferSchemaType<typeof BookingSchema>;
-
 const Booking =
-  models.Booking || model<BookingDocument>("Booking", BookingSchema);
+  models.Booking || model("Booking", BookingSchema);
 
 export default Booking;

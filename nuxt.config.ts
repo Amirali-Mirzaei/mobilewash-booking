@@ -18,12 +18,12 @@ export default defineNuxtConfig({
   ],
 
   runtimeConfig: {
-    telegramBotToken: process.env.TELEGRAM_BOT_TOKEN,
-    telegramChatId1: process.env.TELEGRAM_CHAT_ID_1,
-    telegramChatId2: process.env.TELEGRAM_CHAT_ID_2,
+  mongodbUri: process.env.MONGODB_URI,
 
-    mongodbUri: process.env.MONGODB_URI,
-  },
+  telegramBotToken: process.env.TELEGRAM_BOT_TOKEN,
+  telegramChatId1: process.env.TELEGRAM_CHAT_ID_1,
+  telegramChatId2: process.env.TELEGRAM_CHAT_ID_2,
+},
 
   app: {
 

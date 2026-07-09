@@ -49,7 +49,7 @@ import { NuxtLink } from '../.nuxt/components';
 
       <div class="right-side">
 
-        <NuxtLink to="reservation" class="booking-btn">
+        <NuxtLink to="/reservation" class="booking-btn">
           <Icon
             name="lucide:calendar-days"
             size="20"
@@ -77,40 +77,40 @@ const isActive = (path: string) => route.path === path
 
 *,
 *::before,
-*::after{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+*::after {
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.header{
-    position:fixed;
-    inset: 0 0 auto 0;
-    width: 100%;
-    height: 95px;
-    z-index: 9999;
-    overflow: hidden;
-    background: $secondry;
-    border-bottom: $primary;
+.header {
+position: fixed;
+inset: 0 0 auto 0;
+width: 100%;
+height: 95px;
+z-index: 9999;
+overflow: hidden;
+background: $secondry;
+border-bottom: $primary;
 }
 
-.header-bg{
-    position:absolute;
-    inset:0;
-    overflow:hidden;
-    pointer-events:none;
+.header-bg {
+position: absolute;
+inset:0;
+overflow: hidden;
+pointer-events: none;
 }
 
-.container{
-    position: relative;
-    z-index: 10;
-    max-width: 1450px;
-    height: 100%;
-    margin-left: 3%;
-    padding: 0 45px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.container {
+position: relative;
+ z-index: 10;
+max-width: 1450px;
+height: 100%;
+margin-left: 3%;
+padding: 0 45px;
+display: flex;
+justify-content:space-between;
+align-items: center;
 }
 
 p {
@@ -142,86 +142,85 @@ font-weight: 900;
     color: $primary;
 }
 
-.logo-text p{
-    margin-top: 6px;
-    color:#9f9f9f;
-    font-size: .72rem;
-    letter-spacing:4px;
-
+.logo-text p {
+margin-top: 6px;
+color:#9f9f9f;
+font-size: .72rem;
+letter-spacing:4px;
 }
 
-.nav{
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.nav {
+display: flex;
+align-items: center;
+gap: 18px;
 }
 
-.nav-item{
-    width: 105px;
-    height: 82px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    color: #b7b7b7;
-    transition: .35s;
+.nav-item {
+width: 105px;
+height: 82px;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 5px;
+text-decoration: none;
+color: #b7b7b7;
+transition: .35s;
 }
 
-.nav-item.active{
-    color: $primary;
+.nav-item.active {
+color: $primary;
 }
 
-.nav-item:hover{
-    color: white;
-    transform:translateY(-2px);
+.nav-item:hover {
+color: white;
+transform:translateY(-2px);
 }
 
 .right-side{
-    display:flex;
-    align-items:center;
-    gap:18px;
+display:flex;
+align-items:center;
+gap:18px;
 }
 
 .booking-btn{
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    height: 58px;
-    padding: 0 28px;
-    border: none;
-    border-radius: 999px;
-    color: $secondry;
-    font-weight:700;
-    letter-spacing:.5px;   
-    cursor:pointer;
-    background:
+text-decoration: none;
+position: relative;
+overflow: hidden;
+display: flex;
+align-items: center;
+gap: 12px;
+height: 58px;
+padding: 0 28px;
+border: none;
+border-radius: 999px;
+color: $secondry;
+font-weight:700;
+letter-spacing:.5px;   
+cursor:pointer;
+background:
     linear-gradient(
         135deg,
         $primary-light 0%,
         $primary 35%,
         $primary 100%
     );
-    transition:.35s;
-    box-shadow:
-    0 12px 30px rgba(255,196,0,.35);
+transition:.35s;
+box-shadow:
+0 12px 30px rgba(255,196,0,.35);
 }
 
-.booking-btn span{
-    white-space:nowrap;
+.booking-btn span {
+white-space:nowrap;
 }
 
-.booking-btn:hover{
-    transform:
-    translateY(-3px)
-    scale(1.02);
-    box-shadow:
-    0 0 25px rgba(255,208,0,.55),
+.booking-btn:hover {
+transform:
+translateY(-3px)
+scale(1.02);
+box-shadow:
+  0 0 25px rgba(255,208,0,.55),
     0 20px 60px rgba(255,208,0,.35);
 }
 
@@ -354,30 +353,81 @@ box-shadow:
 }
 
 @media(max-width:1150px){
- .nav{
-   display: none;
- }
- .booking-btn span{
-display: none;
- }
- .booking-btn{
-padding:0;
-width:58px;
- }
+
+  .container {
+    padding: 0 25px;
+    margin-left: 0;
+  }
+
+  .logo-text h1{
+    font-size: 2.5rem;
+  }
+
+  .nav{
+    display:flex;
+    gap:5px;
+  }
+
+  .nav-item{
+    width:75px;
+    height:70px;
+  }
+
+  .booking-btn{
+    height:50px;
+    padding:0 18px;
+    gap:8px;
+  }
+
+  .booking-btn span{
+    display:block;
+    font-size:.85rem;
+  }
+
 }
 
-@media(max-width:600px){
-.logo-text h1{
-font-size: 2rem;
-}
+@media(max-width:700px){
 
-.logo-icon{
-width: 65px;
-}
+  .header{
+    height:80px;
+  }
 
-.container{
-padding: 0 20px;
-}
+  .container{
+    padding:0 15px;
+    gap:10px;
+  }
+
+  .logo-text h1{
+    font-size:1.5rem;
+  }
+
+   .logo-text p {
+    font-size: 0.5rem;
+   }
+
+  .nav{
+    gap:0;
+  }
+
+  .nav-item{
+    width:55px;
+    height:60px;
+    font-size:.7rem;
+  }
+
+  .nav-item svg{
+    width:18px;
+  }
+
+  .booking-btn{
+    width:auto;
+    height:40px;
+    padding:0 12px;
+  }
+
+  .booking-btn svg:last-child{
+    display:none;
+  }
 
 }
 </style>

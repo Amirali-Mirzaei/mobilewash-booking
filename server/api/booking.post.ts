@@ -1,119 +1,99 @@
 import { bookingSchema } from "../validation/booking";
-import { sendTelegramMessage } from "../utils/telegram";
 import { connectDatabase } from "../db/mongoose";
 import Booking from "../models/Booking";
+import { sendTelegramMessage } from "../utils/telegram";
+import { escapeHtml } from "../utils/escapeHtml";
 
 const ipMap = new Map<string, number>();
 
 export default defineEventHandler(async (event) => {
+
+  if (event.method !== "POST") {
+    throw createError({
+      statusCode: 405,
+      statusMessage: "Method Not Allowed",
+    });
+  }
+
+  const ip = getRequestIP(event) || "unknown";
+
+  const lastRequest = ipMap.get(ip);
+
+  if (lastRequest && Date.now() - lastRequest < 10000) {
+    throw createError({
+      statusCode: 429,
+      statusMessage: "Please wait before sending another booking.",
+    });
+  }
+
+  ipMap.set(ip, Date.now());
+
+  const result = bookingSchema.safeParse(await readBody(event));
+
+  if (!result.success) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: "Invalid booking data.",
+    });
+  }
+
+  const body = result.data;
+
+  await connectDatabase();
+
   try {
-    if (event.method !== "POST") {
-      throw createError({
-        statusCode: 405,
-        statusMessage: "Method not allowed",
-      });
-    }
 
-    const ip = getRequestIP(event) || "unknown";
-    const now = Date.now();
+    const booking = new Booking({
+  firstName: body.firstName,
+  lastName: body.lastName,
+  phone: body.phone,
+  address: body.address,
+  date: body.date,
+  time: body.time,
+  status: "pending",
+  cancelToken: crypto.randomUUID(),
+});
 
-    const last = ipMap.get(ip);
+await booking.save();
 
-    if (last && now - last < 10000) {
-      throw createError({
-        statusCode: 429,
-        statusMessage: "Too many requests. Please wait.",
-      });
-    }
+  } catch (error: any) {
 
-    ipMap.set(ip, now);
+  console.error("========== API ERROR ==========");
+  console.dir(error, { depth: null });
+  console.error("================================");
 
-    const result = bookingSchema.safeParse(await readBody(event));
-
-    if (!result.success) {
-      throw createError({
-        statusCode: 400,
-        statusMessage: "Invalid booking data.",
-      });
-    }
-
-    const body = result.data;
-    await connectDatabase();
-    
-    console.log("========== BOOKING BODY ==========");
-    console.log(body);
-    console.log("==================================");
-
-    const safe = (str: string) =>
-      String(str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
-
-    const message = `
-🚘 <b>New Booking</b>
-
-👤 <b>Customer</b>
-${safe(body.firstName)} ${safe(body.lastName)}
-
-📞 <b>Phone</b>
-${safe(body.phone)}
-
-📅 <b>Date</b>
-${safe(body.date)}
-
-🕒 <b>Time</b>
-${safe(body.time)}
-
-📍 <b>Address</b>
-${safe(body.address)}
-`;
-
-let booking;
-
-try {
-  booking = await Booking.create({
-    firstName: body.firstName,
-    lastName: body.lastName,
-    phone: body.phone,
-    address: body.address,
-    date: body.date,
-    time: body.time,
-    status: "pending",
-    cancelToken: crypto.randomUUID(),
-  });
-} catch (error: any) {
-  // Duplicate Key Error
-  if (error.code === 11000) {
+  if (error?.code === 11000) {
     throw createError({
       statusCode: 409,
-      statusMessage: "This time slot is already booked.",
+      statusMessage: "This time slot has already been booked.",
     });
   }
 
   throw error;
 }
 
-    await sendTelegramMessage(message);
+  const message = `
+🚘 <b>New Booking</b>
 
-    return {
-      success: true,
-      message: "Booking created successfully.",
-    };
+👤 ${escapeHtml(body.firstName)} ${escapeHtml(body.lastName)}
 
-  } catch (error: any) {
+📞 ${escapeHtml(body.phone)}
 
-    console.error("========== BOOKING ERROR ==========");
-    console.error(error);
-    console.error("===================================");
+📅 ${escapeHtml(body.date)}
 
-    if (error.statusCode) {
-      throw error;
-    }
+🕒 ${escapeHtml(body.time)}
 
-    throw createError({
-      statusCode: 500,
-      statusMessage: "Unable to process your booking.",
-    });
-  }
+📍 ${escapeHtml(body.address)}
+`;
+
+  await sendTelegramMessage(message);
+
+  return {
+
+    success: true,
+
+    message: "Booking created successfully.",
+
+  };
+
 });

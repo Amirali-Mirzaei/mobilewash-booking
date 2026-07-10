@@ -47,8 +47,8 @@ const bookAppointment = async () => {
 
     alert(
        ` Booking confirmed. ✅
-       If you need to cancel or change your appointment, please contact us by phone.
-       Thank you for choosing AR Mobile Wash.`
+If you need to cancel or change your appointment, please contact us by phone.
+Thank you for choosing AR Mobile Wash.`
        );
 
       booking.value = {
@@ -98,26 +98,26 @@ const bookAppointment = async () => {
 @use "@/assets/styles/variables" as *;
 
 .booking-btn {
-  width: 100%;
-  height: 64px;
-  border: none;
-  border-radius: 18px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 700;
-  background: $primary;
-  color: #111;
-  transition: .35s;
+width: 100%;
+height: 64px;
+border: none;
+border-radius: 18px;
+cursor: pointer;
+font-size: 18px;
+font-weight: 700;
+background: $primary;
+color: #111;
+transition: .35s;
 }
 
 .booking-btn:hover:not(:disabled) {
-  transform: translateY(-5px);
-  box-shadow: 0 0 35px rgba(212, 175, 55, .45);
+transform: translateY(-5px);
+box-shadow: 0 0 35px rgba(212, 175, 55, .45);
 }
 
 .booking-btn:disabled {
-  opacity: .35;
-  cursor: not-allowed;
-  transform: none;
+opacity: .35;
+cursor: not-allowed;
+transform: none;
 }
 </style>

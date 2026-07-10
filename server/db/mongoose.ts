@@ -16,13 +16,13 @@ export async function connectDatabase() {
     });
 
     isConnected = true;
-    console.log("✅ MongoDB Connected");
+    console.log(" MongoDB Connected ✅");
 
   } catch (error) {
     console.error("========== MONGOOSE FULL ERROR ==========");
     console.dir(error, { depth: null });
     console.error("========================================");
 
-    throw error; // مهم: Error جدید نساز
+    throw error; 
   }
 }

@@ -130,7 +130,13 @@ color: $primary;
 }
 
 #one {
-
+width: 100%;
+height: 100%;
+background-image: url('@/assets/images/First.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+border-radius: inherit;
 }
 
 #two {

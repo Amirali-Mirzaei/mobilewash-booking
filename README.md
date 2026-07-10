@@ -4,7 +4,6 @@ A modern booking system for a mobile car wash service built with **Nuxt 4**, **V
 
 The project focuses on providing a fast, secure, and user-friendly booking experience for customers while instantly notifying administrators through Telegram.
 
----
 
 ## ✨ Features
 
@@ -18,7 +17,7 @@ The project focuses on providing a fast, secure, and user-friendly booking exper
 - ⚡ Built with Nuxt 4 & Vue 3
 - 🎨 Responsive modern UI
 
----
+
 
 ## 🛠 Tech Stack
 
@@ -31,7 +30,7 @@ The project focuses on providing a fast, secure, and user-friendly booking exper
 - Telegram Bot API
 - SCSS
 
----
+
 
 ## 📦 Installation
 
@@ -39,7 +38,6 @@ The project focuses on providing a fast, secure, and user-friendly booking exper
 npm install
 ```
 
----
 
 ## 🚀 Run Development Server
 
@@ -53,7 +51,6 @@ The application will be available at:
 http://localhost:3000
 ```
 
----
 
 ## 🔐 Security
 
@@ -65,24 +62,11 @@ This project includes several security measures:
 - Basic rate limiting
 - Secure environment variables
 
----
-
-### 🚧 Coming Soon
-
-- Full Home Page
-- Services Page
-- About Us
-- Contact Page
-- Email Confirmation
-- Admin Dashboard
-
----
-
 ## 📄 License
 
-This project is developed for educational and portfolio purposes.
+This project was developed as a custom client project. All rights to the source code and project deliverables belong to the client upon delivery, unless otherwise agreed in writing.
+This repository is intended for portfolio purposes only and must not be copied, redistributed, or reused without permission.
 
----
 
 ## 👨‍💻 Developer
 

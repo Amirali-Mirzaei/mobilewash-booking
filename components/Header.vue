@@ -1,16 +1,11 @@
-import { NuxtLink } from '../.nuxt/components';
 <template>
   <header class="header">
     <div class="header-bg">
-      <div class="light gold"></div>
-      <div class="light blue"></div>
-    </div>
+     </div>
 
-    <div class="container">
-
-      <div class="logo">
-
-        <div class="logo-text">
+      <div class="container">
+       <div class="logo">
+         <div class="logo-text">
 
           <h1>
            <span>AR</span> Mobilewash
@@ -103,7 +98,7 @@ pointer-events: none;
 
 .container {
 position: relative;
- z-index: 10;
+z-index: 10;
 max-width: 1450px;
 height: 100%;
 margin-left: 3%;
@@ -117,29 +112,29 @@ p {
 font-weight: 900;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    text-decoration:none;
-    user-select:none;
+.logo {
+display: flex;
+align-items: center;
+gap: 18px;
+text-decoration: none;
+user-select: none;
 }
 
-.logo-text{
-    display:flex;
-    flex-direction:column;
+.logo-text {
+display:flex;
+flex-direction:column;
 }
 
-.logo-text h1{
-    font-size: 5vh;
-    line-height: 1;
-    font-weight: 800;
-    letter-spacing: .5px;
-    color:white;
+.logo-text h1 {
+font-size: 5vh;
+line-height: 1;
+font-weight: 800;
+letter-spacing: .5px;
+color:white;
 }
 
-.logo-text h1 span{
-    color: $primary;
+.logo-text h1 span {
+color: $primary;
 }
 
 .logo-text p {
@@ -224,57 +219,57 @@ box-shadow:
     0 20px 60px rgba(255,208,0,.35);
 }
 
-.shine{
-    position:absolute;
-    top:0;
-    left:-80px;
-    width:55px;
-    height:100%;
-    transform:skewX(-25deg);
-    background:
-    linear-gradient(
-        to right,
-        transparent,
-        rgba(255,255,255,.75),
-        transparent
-    );
+.shine {
+position:absolute;
+top:0;
+left:-80px;
+width:55px;
+height:100%;
+transform:skewX(-25deg);
+background:
+ linear-gradient(
+      to right,
+      transparent,
+      rgba(255,255,255,.75),
+      transparent
+  );
 }
 
-.booking-btn:hover .shine{
-    animation: shine 1.1s ease;
+.booking-btn:hover .shine {
+animation: shine 1.1s ease;
 }
 
-@keyframes shine{
+@keyframes shine {
 
-    from{
+    from {
         left:-70px;
     }
 
-    to{
+    to {
         left:130%;
     }
 
 }
 
-.booking-btn svg{
-    transition: .35s;
+.booking-btn svg {
+transition: .35s;
 }
 
-.booking-btn:hover svg:last-child{
-    transform:
-    translateX(6px);
+.booking-btn:hover svg:last-child {
+transform:
+translateX(6px);
 }
 
-.header::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-bottom:
-    1px solid rgba(255,210,0,.15);
-    pointer-events:none;
+.header::before { 
+content: "";
+position: absolute;
+inset: 0;
+border-bottom:
+1px solid rgba(255,210,0,.15);
+pointer-events:none;
 }
 
-.header::after{
+.header::after {
     content: "";
     position: absolute;
     left: 50%;

@@ -20,7 +20,7 @@
 
           <h2>Phone Number</h2>
 
-          <a href="tel:+989123456789">
+          <a href="tel:222-581-6644">
             222-581-6644
           </a>
         </div>
@@ -132,7 +132,7 @@
     font-size: 1.05rem;
     transition: .3s;
     &:hover {
-      color: white;
+      color: $gray-100;
     }
   }
 }

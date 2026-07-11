@@ -1,6 +1,5 @@
 export async function sendTelegramMessage(message: string) {
   const config = useRuntimeConfig();
-
   console.log("========== TELEGRAM CONFIG ==========");
   console.log({
     hasToken: !!config.telegramBotToken,

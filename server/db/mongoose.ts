@@ -22,7 +22,6 @@ export async function connectDatabase() {
     console.error("========== MONGOOSE FULL ERROR ==========");
     console.dir(error, { depth: null });
     console.error("========================================");
-
     throw error; 
   }
 }

@@ -235,8 +235,8 @@ box-shadow: 0 0 25px rgba(212,175,55,.55);
 }
 
 .calendar-header button:disabled {
-  opacity: .35;
-  cursor: not-allowed;
-  transform: none;
+opacity: .35;
+cursor: not-allowed;
+transform: none;
 }
 </style>

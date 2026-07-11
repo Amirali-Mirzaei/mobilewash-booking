@@ -89,7 +89,7 @@ const fullName = computed(() => {
 .summary-card {
 background: rgba(255,255,255,.04);
 border: 1px solid rgba(212,175,55,.18);
-border-radius:24px;
+border-radius: 24px;
 padding: 28px;
 display: flex;
 flex-direction: column;

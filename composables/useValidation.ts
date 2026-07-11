@@ -43,7 +43,6 @@ export const useValidation = () => {
   const touch = (field: keyof typeof touched.value) => {
     touched.value[field] = true;
   };
-
   return {
     errors,
     touched,

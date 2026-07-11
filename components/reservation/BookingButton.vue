@@ -87,9 +87,7 @@ Thank you for choosing AR Mobile Wash.`
     }
 
   } finally {
-
     loading.value = false;
-
   }
 };
 </script>

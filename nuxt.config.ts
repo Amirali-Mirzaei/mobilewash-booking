@@ -18,6 +18,7 @@ export default defineNuxtConfig({
   ],
 
   runtimeConfig: {
+    
   mongodbUri: process.env.MONGODB_URI,
 
   telegramBotToken: process.env.TELEGRAM_BOT_TOKEN,

@@ -48,14 +48,14 @@ cursor: pointer;
 }
 
 .slot:hover {
-transform:translateY(-4px);
+transform: translateY(-4px);
 border-color: $primary;
-box-shadow:0 0 18px rgba(212,175,55,.25);
+box-shadow: 0 0 18px rgba(212,175,55,.25);
 }
 
 .active {
 background: $primary;
-color:#111;
-box-shadow:0 0 25px rgba(212,175,55,.5);
+color: $secondry;
+box-shadow: 0 0 25px rgba(212,175,55,.5);
 }
 </style>

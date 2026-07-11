@@ -89,11 +89,7 @@ await booking.save();
   await sendTelegramMessage(message);
 
   return {
-
     success: true,
-
     message: "Booking created successfully.",
-
   };
-
 });

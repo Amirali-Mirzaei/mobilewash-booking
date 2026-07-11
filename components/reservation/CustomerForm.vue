@@ -76,8 +76,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Value } from 'sass-embedded';
-
 const { booking } = useBooking();
 const { errors, touched, touch } = useValidation();
 

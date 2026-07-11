@@ -69,5 +69,4 @@ BookingSchema.index(
 
 const Booking =
   models.Booking || model("Booking", BookingSchema);
-
 export default Booking;

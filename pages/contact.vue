@@ -35,7 +35,7 @@
 
           <h2>Email Address</h2>
 
-          <a href="mailto:info@armobilewash.com">
+          <a href="mailto:armobilewash2026@gmail.com">
             armobilewash2026@gmail.com
           </a>
         </div>

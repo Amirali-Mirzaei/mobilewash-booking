@@ -17,8 +17,8 @@
       <div class="links">
         <h3>Quick Links</h3>
          <NuxtLink to="/">Home</NuxtLink><br><br>
-          <NuxtLink to="/reservation">Booking</NuxtLink><br><br>
-           <NuxtLink to="/contact">Contact</NuxtLink>
+          <NuxtLink to="/reservation">Contact</NuxtLink><br><br>
+           <NuxtLink to="/contact">Booking</NuxtLink>
       </div>
 
 
@@ -41,7 +41,7 @@
 
    <div class="bottom">
      <p>
-      © 2026 AR Mobilewash. All rights reserved.
+      © 2026 AR Mobilewash │ All rights reserved
      </p>
 
      <p>

@@ -102,6 +102,7 @@ transition: all .35s;
 display: flex;
 align-items: center;
 justify-content: center;
+
   &:hover {
     border-color: $primary-hover;
     transform: translateY(-5px);
@@ -129,22 +130,31 @@ font-weight: bold;
 color: $primary;
 }
 
-#one {
+#one,
+#two,
+#three {
 width: 100%;
 height: 100%;
-background-image: url('@/assets/images/First.png');
-background-size: cover;
-background-position: center;
 background-repeat: no-repeat;
 border-radius: inherit;
 }
 
-#two {
+#one {
+background-image: url("@/assets/images/First.png");
+background-position: 50% 45%;
+background-size: 225%;
+}
 
+#two {
+background-image: url("@/assets/images/Second.png");
+background-position: 50% 40%;
+background-size: 200%;
 }
 
 #three {
-
+background-image: url("@/assets/images/Third.png");
+background-position: 50% 48%;
+background-size: 260%;
 }
 
 .cta-section {
@@ -152,7 +162,7 @@ margin: 10% auto 5%;
 width: 80%;
 min-height: 280px;
 border-radius: 30px;
-background: linear-gradient (
+background: linear-gradient(
     135deg,
     rgba($primary, .15),
     rgba(0,0,0,.9));
@@ -163,6 +173,7 @@ justify-content: center;
 text-align: center;
 overflow: hidden;
 position: relative;
+
 &::before {
     content: "";
     position: absolute;
@@ -180,6 +191,7 @@ position: relative;
 position: relative;
 z-index: 2;
 padding: 30px;
+
   h2 {
     color: white;
     font-size: 38px;
@@ -209,6 +221,7 @@ align-items: center;
 gap: 10px;
 transition: .35s;
 text-decoration: none;
+
 &:hover {
    background: $primary-hover;
    transform: translateY(-5px);

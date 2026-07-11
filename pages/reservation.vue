@@ -2,6 +2,89 @@ import { ReservationCustomerForm, ReservationBookingButton, ReservationBookingSu
 <template>
   <!--edit-->
   <section class="reservation-page">
+
+   <Transition name="terms">
+      <div
+        v-if="!accepted"
+        class="terms-overlay">
+
+        <div class="terms-card">
+          <span class="subtitle">
+            Please Review Before Booking
+          </span>
+
+          <h2>Vehicle Preparation & Customer Responsibility</h2>
+
+          <p class="intro">
+            To ensure the best service and protect your belongings, please review
+            the following information before your appointment.
+          </p>
+
+          <ul>
+            <li>
+              Please remove all personal belongings from your vehicle before your
+              appointment, including cash, wallets, electronics, sunglasses,
+              documents, and other valuables.
+            </li>
+
+            <li>
+              While we take great care during every service, we are not
+              responsible for any personal items that are lost, misplaced, or
+              damaged before, during, or after the service.
+            </li>
+
+            <li>
+              If personal belongings are left inside the vehicle, they may need
+              to be moved during the cleaning process. We are not liable for any
+              missing or damaged items.
+            </li>
+
+            <li>
+              Please inform us in advance if your vehicle has any pre-existing
+              damage, loose interior trim, broken parts, or sensitive areas that
+              require special attention.
+            </li>
+
+            <li>
+              We recommend removing any child seats if you would like the areas
+              underneath and behind them to be thoroughly cleaned.
+            </li>
+
+            <li>
+              For health and safety reasons, vehicles containing hazardous
+              materials, excessive biohazards, or illegal substances may be
+              refused service.
+            </li>
+
+            <li>
+              By booking our services, you acknowledge and agree to these terms
+              and conditions.
+            </li>
+          </ul>
+
+          <label class="agree">
+            <input
+              type="checkbox"
+              v-model="agreed"
+            />
+
+            <span>
+              I have read and agree to the Terms & Conditions.
+            </span>
+          </label>
+
+          <button
+            class="continue-btn"
+            :disabled="!agreed"
+            @click="accepted = true">
+            Continue to Booking →
+          </button>
+
+        </div>
+      </div>
+    </Transition>
+
+
       <div class="overlay"></div>
 
        <div class="container">
@@ -21,12 +104,13 @@ import { ReservationCustomerForm, ReservationBookingButton, ReservationBookingSu
         </p>
       </div>
 
-     <div class="booking-card">
+    <div
+      ref="bookingSection"
+      class="booking-card">
 
   <div class="section">
     <h2>Select Date</h2>
-
-<ReservationBookingCalendar />
+    <ReservationBookingCalendar />
   </div>
 
   <div class="section">
@@ -38,14 +122,19 @@ import { ReservationCustomerForm, ReservationBookingButton, ReservationBookingSu
     <h2>Customer Information</h2>
     <ReservationCustomerForm />
   </div>
-  <ReservationBookingSummary />
-  <ReservationBookingButton />
+
+   <ReservationBookingSummary />
+    <ReservationBookingButton />
      </div>
   </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
+const agreed = ref(false);
+const accepted = ref(false);
 </script>
 
 <style scoped lang="scss">
@@ -191,5 +280,117 @@ gap: 12px;
 text-align: center;
 color: $primary;
 font-weight: 600;
+}
+
+.terms-overlay {
+position: fixed;
+inset: 0;
+z-index: 9999;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px;
+background: rgba(0,0,0,.82);
+backdrop-filter: blur(18px);
+}
+
+.terms-card {
+width: min(900px,100%);
+max-height: 85vh;
+overflow-y: auto;
+background: rgba(15,15,15,.95);
+backdrop-filter: blur(25px);
+border: 1px solid rgba(212,175,55,.25);
+border-radius: 28px;
+padding: 45px;
+}
+
+.terms-card h2 {
+color:white;
+margin:15px 0;
+}
+
+.intro {
+color: #c9c9c9;
+line-height: 1.8;
+margin-bottom: 25px;
+}
+
+.terms-card ul {
+display: flex;
+flex-direction: column;
+gap: 18px;
+color: $gray-100;
+line-height: 1.8;
+padding-left: 22px;
+}
+
+.terms-card li::marker{
+  color:$primary;
+}
+
+.agree {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+margin-top: 35px;
+color: white;
+}
+
+.agree input {
+width: 18px;
+height: 18px;
+accent-color: $primary;
+margin-top: 4px;
+cursor: pointer;
+}
+
+.continue-btn {
+width: 100%;
+margin-top: 30px;
+padding: 18px;
+border: none;
+border-radius: 14px;
+background: $primary;
+color: $secondry;
+font-size: 1rem;
+font-weight: 700;
+transition: .35s;
+cursor: pointer;
+}
+
+.continue-btn:hover:not(:disabled) {
+transform: translateY(-3px);  
+background: $primary-hover;
+}
+
+.continue-btn:disabled {
+  background: #333;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.terms-enter-active,
+.terms-leave-active {
+transition: all .45s ease;
+}
+
+.terms-enter-from,
+.terms-leave-to {
+opacity:0;
+}
+
+.terms-enter-from .terms-card {
+transform: translateY(50px) scale(.92);
+opacity: 0;
+}
+
+.terms-leave-to .terms-card {
+transform: translateY(-40px) scale(.95);
+opacity: 0;
+}
+
+.terms-card {
+transition: .45s ease;
 }
 </style>

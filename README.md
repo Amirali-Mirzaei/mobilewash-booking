@@ -71,5 +71,3 @@ This repository is intended for portfolio purposes only and must not be copied, 
 ## 👨‍💻 Developer
 
 **Amirali Mirzaei**
-
-Frontend Developer

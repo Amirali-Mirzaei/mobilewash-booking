@@ -2,15 +2,24 @@
 /// <reference types="node" />
 
 export default defineNuxtConfig({
+
   compatibilityDate: "2025-07-15",
 
   devtools: {
     enabled: true,
   },
 
-  modules: ["@nuxt/icon"],
+  nitro: {
+    preset: "netlify",
+  },
 
-  css: ["@/assets/styles/main.scss"],
+  modules: [
+    "@nuxt/icon",
+  ],
+
+  css: [
+    "@/assets/styles/main.scss",
+  ],
 
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
@@ -36,27 +45,28 @@ export default defineNuxtConfig({
         },
       ],
 
-     link: [
-       {
-        rel: "icon",
-        type: "image/svg+xml",
-        href: "/favicon.svg",
-       },
-       {
-        rel: "icon",
-        type: "image/png",
-        sizes: "96x96",
-        href: "/favicon-96x96.png",
-       },
-       {
-        rel: "apple-touch-icon",
-        href: "/apple-touch-icon.png",
-       },
-       {
-        rel: "manifest",
-        href: "/site.webmanifest",
-       },
+      link: [
+        {
+          rel: "icon",
+          type: "image/svg+xml",
+          href: "/favicon.svg",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "96x96",
+          href: "/favicon-96x96.png",
+        },
+        {
+          rel: "apple-touch-icon",
+          href: "/apple-touch-icon.png",
+        },
+        {
+          rel: "manifest",
+          href: "/site.webmanifest",
+        },
       ],
     },
   },
+
 });

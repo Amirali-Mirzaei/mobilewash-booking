@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-import banner from '@/assets/images/Banner.PNG'
+import banner from '@/assets/images/Banner.png'
 </script>
 
 <style lang="scss" scoped>

@@ -18,7 +18,8 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node":   "^26.1.0",
+    "@netlify/nuxt": "^0.3.8",
+    "@types/node": "^26.1.0",
     "sass-embedded": "^1.100.0",
     "typescript": "^5.9.2"
   }

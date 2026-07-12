@@ -9,12 +9,9 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  nitro: {
-    preset: "netlify",
-  },
-
   modules: [
     "@nuxt/icon",
+    "@netlify/nuxt",
   ],
 
   css: [

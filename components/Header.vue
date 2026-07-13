@@ -393,11 +393,11 @@ box-shadow:
   }
 
   .logo-text h1{
-    font-size:1.5rem;
+    font-size:1.1rem;
   }
 
    .logo-text p {
-    font-size: 0.5rem;
+    font-size: 0.3rem;
    }
 
   .nav{
@@ -415,7 +415,7 @@ box-shadow:
   }
 
   .booking-btn{
-    width: 140px;
+    width: 130px;
     height:40px;
     padding:0 12px;
   }

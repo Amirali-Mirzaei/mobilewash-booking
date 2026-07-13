@@ -290,12 +290,11 @@ text-decoration: none;
   }
 
   #two {
-    background-size: 155%;
+    background-size: 170%;
   }
 
   #three {
-    background-size: 200%;
+    background-size: 220%;
   }
-
 }
 </style>

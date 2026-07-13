@@ -286,15 +286,18 @@ text-decoration: none;
   }
     
   #one {
-    background-size: 40vh;
+    background-size: 50vh;
+    height: inherit;
   }
 
   #two {
-    background-size: 30vh;
+    background-size: 40vh;
+    height: inherit;
   }
 
   #three {
-    background-size: 40vh;
+    background-size: 50vh;
+    height: inherit;
   }
 }
 </style>

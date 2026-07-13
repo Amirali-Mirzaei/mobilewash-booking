@@ -228,7 +228,7 @@ text-decoration: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   .banner {
     margin-top: 15%;

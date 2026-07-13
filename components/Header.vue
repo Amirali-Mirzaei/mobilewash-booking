@@ -381,7 +381,7 @@ box-shadow:
 
 }
 
-@media(max-width:700px){
+@media(max-width:600px){
 
   .header{
     height:80px;
@@ -415,7 +415,7 @@ box-shadow:
   }
 
   .booking-btn{
-    width:auto;
+    width: 140px;
     height:40px;
     padding:0 12px;
   }

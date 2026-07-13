@@ -284,7 +284,18 @@ text-decoration: none;
     padding: 13px 28px;
     font-size: 16px;
   }
+    
+  #one {
+    background-size: 205%;
+  }
 
+  #two {
+    background-size: 155%;
+  }
+
+  #three {
+    background-size: 200%;
+  }
 
 }
 </style>

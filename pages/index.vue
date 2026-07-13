@@ -142,19 +142,19 @@ border-radius: inherit;
 #one {
 background-image: url("@/assets/images/First.png");
 background-position: 50% 45%;
-background-size: 225%;
+background-size: 200%;
 }
 
 #two {
 background-image: url("@/assets/images/Second.png");
 background-position: 50% 40%;
-background-size: 200%;
+background-size: 150%;
 }
 
 #three {
 background-image: url("@/assets/images/Third.png");
 background-position: 50% 48%;
-background-size: 260%;
+background-size: 190%;
 }
 
 .cta-section {
@@ -286,15 +286,15 @@ text-decoration: none;
   }
     
   #one {
-    background-size: 205%;
+    background-size: 50vh;
   }
 
   #two {
-    background-size: 170%;
+    background-size: 40vh;
   }
 
   #three {
-    background-size: 220%;
+    background-size: 50vh;
   }
 }
 </style>

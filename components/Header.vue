@@ -101,7 +101,7 @@ position: relative;
 z-index: 10;
 max-width: 1450px;
 height: 100%;
-margin-left: 3%;
+margin: 0 auto;
 padding: 0 45px;
 display: flex;
 justify-content:space-between;
@@ -126,7 +126,7 @@ flex-direction:column;
 }
 
 .logo-text h1 {
-font-size: 5vh;
+font-size: clamp(1.5rem, 2.5vw, 3rem);
 line-height: 1;
 font-weight: 800;
 letter-spacing: .5px;

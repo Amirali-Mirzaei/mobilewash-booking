@@ -4,6 +4,9 @@ A modern booking system for a mobile car wash service built with **Nuxt 4**, **V
 
 The project focuses on providing a fast, secure, and user-friendly booking experience for customers while instantly notifying administrators through Telegram.
 
+## 🌐 Live Demo
+
+🔗 **Website:** https://armobilewash.netlify.app
 
 ## ✨ Features
 

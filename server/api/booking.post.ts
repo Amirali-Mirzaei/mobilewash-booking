@@ -58,9 +58,7 @@ await booking.save();
 
   } catch (error: any) {
 
-  console.error("========== API ERROR ==========");
-  console.dir(error, { depth: null });
-  console.error("================================");
+  console.error(error);
 
   if (error?.code === 11000) {
     throw createError({

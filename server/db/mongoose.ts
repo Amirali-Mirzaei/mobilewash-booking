@@ -19,9 +19,7 @@ export async function connectDatabase() {
     console.log(" MongoDB Connected ✅");
 
   } catch (error) {
-    console.error("========== MONGOOSE FULL ERROR ==========");
-    console.dir(error, { depth: null });
-    console.error("========================================");
+    console.error("MongoDB connection error:", error);
     throw error; 
   }
 }

@@ -29,9 +29,8 @@ export async function sendTelegramMessage(message: string) {
 
   const url = `https://api.telegram.org/bot${config.telegramBotToken}/sendMessage`;
 
-  console.log("Telegram URL:", url);
+  console.log("Telegram API ready");
   console.log("Chat IDs:", chatIds);
-  console.log("Message:", message);
 
   try {
     const responses = await Promise.allSettled(

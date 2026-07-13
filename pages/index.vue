@@ -286,15 +286,15 @@ text-decoration: none;
   }
     
   #one {
-    background-size: 50vh;
-  }
-
-  #two {
     background-size: 40vh;
   }
 
+  #two {
+    background-size: 30vh;
+  }
+
   #three {
-    background-size: 50vh;
+    background-size: 40vh;
   }
 }
 </style>

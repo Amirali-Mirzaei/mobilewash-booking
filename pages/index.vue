@@ -247,8 +247,8 @@ text-decoration: none;
   }
 
   .cards-container {
-    width: 40vw;
-    height: 30vh;
+    width: 30vh;
+    height: 35vh;
     min-width: unset;
     margin-top: 9%;
   }
@@ -286,17 +286,17 @@ text-decoration: none;
   }
     
   #one {
-    background-size: 50vh;
+    background-size: 60vh;
     height: inherit;
   }
 
   #two {
-    background-size: 40vh;
+    background-size: 45vh;
     height: inherit;
   }
 
   #three {
-    background-size: 50vh;
+    background-size: 55vh;
     height: inherit;
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <div class="form-grid">
-
     <div class="input-group">
       <label>First Name</label>
         <input
@@ -60,7 +59,7 @@
        <textarea
          :value="booking.address"
          rows="4"
-         placeholder="Street, City, Postal Code"
+         placeholder="Street, City"
          @input="onAddressInput"
          @blur="touch('address')"
          :class="{

@@ -17,8 +17,8 @@
       <div class="links">
         <h3>Quick Links</h3>
          <NuxtLink to="/">Home</NuxtLink><br><br>
-          <NuxtLink to="/reservation">Contact</NuxtLink><br><br>
-           <NuxtLink to="/contact">Booking</NuxtLink>
+          <NuxtLink to="/contact">Contact</NuxtLink><br><br>
+           <NuxtLink to="/reservation">Booking</NuxtLink>
       </div>
 
 
@@ -111,6 +111,7 @@ gap: 50px;
     color: $text-dark;
     text-decoration: none;
     transition: .3s;
+    font-size: 2vh;
   }
 
   a:hover {

@@ -4,6 +4,28 @@
       :src="banner"
         class="banner">
 
+         <div class="offer-card">
+           <span class="offer-badge">LIMITED TIME OFFER</span>
+            <h2>Book Today & Save 50%</h2>
+
+           <div class="offer-price">
+             <span class="old-price">$40</span>
+              <span class="new-price">$20</span>
+           </div>
+
+            <p>
+              Professional exterior cleaning at your location. 
+              Fast, convenient, and eco-friendly.
+            </p>
+
+          <NuxtLink to="/reservation" class="offer-btn">
+            Book Now
+          <Icon
+            name="lucide:arrow-right"
+            size="20"/>
+          </NuxtLink>
+         </div>
+
        <h1>
          HOW IT WORKS? 
        </h1>  
@@ -47,16 +69,9 @@
        </h2>
 
        <p>
-        Book your mobile car wash today and enjoy a professional cleaning service at your doorstep.
+        Book your mobile car wash today and 
+        enjoy a professional cleaning service at your doorstep.
        </p>
-
-       <NuxtLink to="/reservation" class="cta-btn">
-         Book Your Wash
-          <Icon 
-            name="lucide:arrow-right"
-            size="22"
-           />
-       </NuxtLink>
     </div>
  </section>
 
@@ -80,7 +95,7 @@ border-bottom: 2px solid $primary;
 h1 {
 color: $primary;
 text-align: center;
-margin-top: 5%;
+margin-top: 8%;
 }
 
 .cards {
@@ -199,11 +214,11 @@ padding: 30px;
   }
 
   p {
-   color: #ddd;
-   max-width: 650px;
+   color: white;
+   max-width: 690px;
    font-size: 18px;
    line-height: 1.6;
-   margin: 0 auto 35px;
+   margin: 30px auto 35px;
   }
 }
 
@@ -228,6 +243,102 @@ text-decoration: none;
   }
 }
 
+.offer-card {
+width: min(900px, 90%);
+margin: 9% auto 5%;
+padding: 40px 30px;
+text-align: center;
+border-radius: 28px;
+position: relative;
+overflow: hidden;
+border: 2px solid rgba($primary, .8);
+background: linear-gradient(
+  135deg,
+  rgba($primary, .18),
+  rgba(0, 0, 0, .95)
+);
+box-shadow:
+  0 0 40px rgba($primary, .18),
+  inset 0 0 20px rgba(255,255,255,.04);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -100px;
+    top: -120px;
+    background: $primary;
+    filter: blur(120px);
+    opacity: .22;
+  }
+}
+
+.offer-badge {
+display: inline-block;
+padding: 8px 18px;
+border-radius: 999px;
+background: $primary;
+color: black;
+font-size: .85rem;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.offer-card h2 {
+  color: white;
+  font-size: 2.2rem;
+  margin: 25px 0;
+}
+
+.offer-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.old-price {
+color: #9b9b9b;
+font-size: 2rem;
+text-decoration: line-through;
+}
+
+.new-price {
+color: $primary;
+font-size: 3.6rem;
+font-weight: 800;
+text-shadow: 0 0 18px rgba($primary,.45);
+}
+
+.offer-card p {
+max-width: 690px;
+margin: auto;
+color: white;
+font-size: 18px;
+line-height: 1.7;
+}
+
+.offer-btn {
+margin-top: 35px;
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 15px 34px;
+border-radius: 50px;
+background: $primary;
+color: black;
+font-weight: 700;
+text-decoration: none;
+transition: .35s;
+
+  &:hover {
+    background: $primary-hover;
+    transform: translateY(-4px);
+  }
+}
+
 @media (max-width: 600px) {
 
   .banner {
@@ -235,8 +346,8 @@ text-decoration: none;
   }
 
   h1 {
-    font-size: 28px;
-    margin-top: 8%;
+    font-size: 25px;
+    margin-top: 15%;
   }
 
   .cards {
@@ -298,6 +409,27 @@ text-decoration: none;
   #three {
     background-size: 55vh;
     height: inherit;
+  }
+
+  .offer-card {
+    margin-top: 18%;
+    padding: 30px 20px;
+  }
+
+  .offer-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .old-price {
+    font-size: 1.5rem;
+  }
+
+  .new-price {
+    font-size: 2.8rem;
+  }
+
+  .offer-card p {
+    font-size: 15px;
   }
 }
 </style>

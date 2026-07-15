@@ -11,6 +11,7 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/icon",
+    "@nuxtjs/sitemap",
   ],
 
   css: [
@@ -25,11 +26,30 @@ export default defineNuxtConfig({
     telegramChatId2: process.env.TELEGRAM_CHAT_ID_2,
   },
 
+   
+   site: {
+    url: "https://armobilewash.netlify.app",
+  },
+
+  sitemap: {
+    autoLastmod: true,
+  },
+
   app: {
     head: {
-      title: "AR Professional Car Wash",
+
+      title: "AR Mobile Wash | Professional Mobile Car Wash in Vancouver",
+
+      htmlAttrs: {
+        lang: "en",
+      },
 
       meta: [
+        {
+          charset: "utf-8",
+           name:"google-site-verification", 
+           content:"E4V-4f28namRJtxZYIkXvlmKebq-50khVg2_4whDd48", 
+        },
         {
           name: "viewport",
           content: "width=device-width, initial-scale=1",
@@ -37,7 +57,24 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Professional mobile car wash service across Vancouver. Fast, reliable, and convenient booking.",
+            "Professional mobile car wash service across Vancouver. Fast, reliable, and convenient booking for interior and exterior detailing.",
+        },
+        {
+          name: "keywords",
+          content:
+            "mobile car wash Vancouver, car detailing Vancouver, mobile detailing, exterior car wash, interior car cleaning, AR Mobile Wash",
+        },
+        {
+          name: "author",
+          content: "AR Mobile Wash",
+        },
+        {
+          name: "robots",
+          content: "index, follow",
+        },
+        {
+          name: "theme-color",
+          content: "#D4AF37",
         },
       ],
 
@@ -62,6 +99,7 @@ export default defineNuxtConfig({
           href: "/site.webmanifest",
         },
       ],
+
     },
   },
 

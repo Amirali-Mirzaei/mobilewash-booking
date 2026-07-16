@@ -76,8 +76,88 @@ export default defineNuxtConfig({
           name: "theme-color",
           content: "#D4AF37",
         },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+         property: "og:title",
+         content: "AR Mobile Wash | Professional Mobile Car Wash in Vancouver",
+        },
+        {
+         property: "og:description",
+         content:
+         "Professional mobile car wash service across Vancouver. Fast, reliable, and convenient booking.",
+        },
+        {
+         property: "og:url",
+         content: "https://armobilewash.netlify.app",
+        },
+        {
+         property: "og:image",
+         content: "https://armobilewash.netlify.app/og-image.jpg",
+        },
+        {
+         property: "og:site_name",
+         content: "AR Mobile Wash",
+        },
+        {
+         name: "twitter:card",
+         content: "summary_large_image",
+        },
+        {
+         name: "twitter:title",
+         content: "AR Mobile Wash | Professional Mobile Car Wash in Vancouver",
+        },
+        {
+         name: "twitter:description",
+         content:
+         "Professional mobile car wash service across Vancouver.",
+        },
+        {
+         name: "twitter:image",
+        content: "https://armobilewash.netlify.app/og-image.jpg",
+       },
       ],
 
+script: [
+  {
+    type: "application/ld+json",
+    textContent: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+
+      name: "AR Mobile Wash",
+
+      image: "https://armobilewash.netlify.app/og-image.jpg",
+
+      url: "https://armobilewash.netlify.app",
+
+      telephone: "+1XXXXXXXXXX",
+
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Vancouver",
+        addressRegion: "BC",
+        addressCountry: "CA",
+      },
+
+      areaServed: {
+        "@type": "City",
+        name: "Vancouver",
+      },
+
+      priceRange: "$$",
+
+      serviceType: [
+        "Mobile Car Wash",
+        "Car Detailing",
+        "Interior Cleaning",
+        "Exterior Wash",
+      ],
+    }),
+  },
+],
       link: [
         {
           rel: "icon",

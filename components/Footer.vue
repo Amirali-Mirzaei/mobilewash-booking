@@ -25,7 +25,7 @@
       <div class="contact">
         <h3>Contact</h3>
         <p>
-          <Icon name="lucide:phone" size="18"/> 222-581-6644
+          <Icon name="lucide:phone" size="18"/> 226-581-6644
         </p>
         
         <p>      

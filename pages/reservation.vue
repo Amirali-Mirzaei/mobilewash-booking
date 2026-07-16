@@ -1,6 +1,5 @@
 import { ReservationCustomerForm, ReservationBookingButton, ReservationBookingSummary } from '../.nuxt/components';
 <template>
-  <!--edit-->
   <section class="reservation-page">
 
    <Transition name="terms">

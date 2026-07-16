@@ -47,6 +47,10 @@ const timeSlots = computed(() => {
     return generateSlots(8, 13);
   }
 
+  if (day === 6) {
+    return generateSlots(10, 14);
+  }
+
   return generateSlots(14, 19);
 });
 

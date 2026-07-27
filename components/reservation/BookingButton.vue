@@ -16,6 +16,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import Swal from "sweetalert2";
 
 const { booking } = useBooking();
 
@@ -45,11 +46,39 @@ const bookAppointment = async () => {
 
     console.log(response);
 
-    alert(
-       ` Booking confirmed. ✅
-If you need to cancel or change your appointment, please contact us by phone.
-Thank you for choosing AR Mobile Wash.`
-       );
+   await Swal.fire({
+  icon: "success",
+  title: "Thank You!",
+  html: `
+      <div style="font-size:16px;line-height:1.8">
+        <b>Your booking has been confirmed.</b><br><br>
+
+        📅 Your appointment has been successfully scheduled.
+
+        <br><br>
+
+        📞 Need to cancel or change your appointment?
+        Please contact us by phone.
+
+        <br><br>
+
+        <span style="color:#D4AF37;font-weight:700">
+        We look forward to serving you!
+        </span>
+      </div>
+  `,
+  confirmButtonText: "Done",
+  confirmButtonColor: "#D4AF37",
+  background: "#181818",
+  color: "#fff",
+  width: 500,
+  showClass: {
+    popup: "animate__animated animate__zoomIn",
+  },
+  hideClass: {
+    popup: "animate__animated animate__zoomOut",
+  },
+});
 
       booking.value = {
            firstName: "",
@@ -60,35 +89,64 @@ Thank you for choosing AR Mobile Wash.`
            time: "",
          };
   } catch (error: any) {
+  console.error(error);
 
-    console.error(error);
+  const status = error?.statusCode || error?.response?.status;
+  const message =
+    error?.data?.statusMessage ||
+    error?.response?._data?.statusMessage;
 
-    const status = error?.statusCode || error?.response?.status;
-    const message =
-      error?.data?.statusMessage ||
-      error?.response?._data?.statusMessage;
+  switch (status) {
+    case 409:
+      await Swal.fire({
+        icon: "error",
+        title: "Time Slot Unavailable",
+        text: "This time slot has already been booked. Please choose another available time.",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#D4AF37",
+        background: "#181818",
+        color: "#fff",
+      });
+      break;
 
-    switch (status) {
+    case 429:
+      await Swal.fire({
+        icon: "warning",
+        title: "Please Wait",
+        text: "Please wait a few seconds before booking again.",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#D4AF37",
+        background: "#181818",
+        color: "#fff",
+      });
+      break;
 
-      case 409:
-        alert("❌ This time slot has already been booked.");
-        break;
+    case 400:
+      await Swal.fire({
+        icon: "warning",
+        title: "Invalid Information",
+        text: "Please check your booking information and try again.",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#D4AF37",
+        background: "#181818",
+        color: "#fff",
+      });
+      break;
 
-      case 429:
-        alert("⏳ Please wait a few seconds before booking again.");
-        break;
-
-      case 400:
-        alert("⚠️ Please check your booking information.");
-        break;
-
-      default:
-        alert(message || "❌ Something went wrong.");
-    }
-
-  } finally {
-    loading.value = false;
+    default:
+      await Swal.fire({
+        icon: "error",
+        title: "Booking Failed",
+        text: message || "Something went wrong. Please try again later.",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#D4AF37",
+        background: "#181818",
+        color: "#fff",
+      });
   }
+} finally {
+  loading.value = false;
+}
 };
 </script>
 

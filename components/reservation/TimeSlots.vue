@@ -1,5 +1,4 @@
 <template>
-    <!--edit-->
   <div class="time-slots">
     <button
       v-for="slot in timeSlots"
@@ -20,7 +19,7 @@ const { booking } = useBooking();
 
 const formatTime = (hour: number, minute: number): string => {
   const period = hour >= 12 ? "PM" : "AM";
-  const displayHour = hour % 12 === 0 ? 12 : hour % 12;
+   const displayHour = hour % 12 === 0 ? 12 : hour % 12;
 
   return `${displayHour}:${minute.toString().padStart(2, "0")} ${period}`;
 };
@@ -35,6 +34,10 @@ const generateSlots = (startHour: number, endHour: number) => {
 
   slots.push(formatTime(endHour, 0));
 
+  if (endHour === 12) {
+    slots.push(formatTime(12, 30));
+  }
+
   return slots;
 };
 
@@ -44,11 +47,7 @@ const timeSlots = computed(() => {
   const day = booking.value.date.getDay();
 
   if (day >= 1 && day <= 5) {
-    return generateSlots(8, 13);
-  }
-
-  if (day === 6) {
-    return generateSlots(10, 14);
+    return generateSlots(8, 12);
   }
 
   return generateSlots(14, 19);

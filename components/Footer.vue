@@ -43,13 +43,6 @@
      <p>
       © 2026 AR Mobilewash │ All rights reserved
      </p>
-
-     <p>
-        Developed by 
-      <a href="https://github.com/Amirali-Mirzaei" target="_blank">
-        Amirali Mirzaei
-      </a>
-     </p>
 </div>
   </footer>
 </template>
@@ -66,7 +59,7 @@
 .footer {
 width: 100%;
 padding: 60px 8% 20px;
-background: $primary;
+background: linear-gradient(to right, $primary, $primary-deep);
 color: white;
 overflow: hidden;
 }
@@ -128,16 +121,6 @@ padding-top: 20px;
 border-top: 3px solid rgba(255,255,255,.15);
 text-align: center;
 color: $text-dark;
-  
-   a {
-    color: $text-dark;
-    text-decoration: none;
-    transition: color .35s;
-     &:hover {
-       color: $gray-100;
-     }
-   }
-   
 }
 
 

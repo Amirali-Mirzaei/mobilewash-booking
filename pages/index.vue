@@ -5,12 +5,12 @@
         class="banner">
 
          <div class="offer-card">
-           <span class="offer-badge">LIMITED TIME OFFER</span>
-            <h2>Book Today & Save 50%</h2>
+           <span class="offer-badge">SPECIAL OFFER</span>
+            <h2>SAVE $5 BY BOOKING THROUGH THE WEBSITE</h2>
 
            <div class="offer-price">
-             <span class="old-price">$40</span>
-              <span class="new-price">$20</span>
+             <span class="old-price">$35</span>
+              <span class="new-price">$30</span>
            </div>
 
             <p>
@@ -280,23 +280,23 @@ padding: 8px 18px;
 border-radius: 999px;
 background: $primary;
 color: black;
-font-size: .85rem;
-font-weight: 700;
+font-size: .90rem;
+font-weight: 800;
 letter-spacing: 1px;
 }
 
 .offer-card h2 {
-  color: white;
-  font-size: 2.2rem;
-  margin: 25px 0;
+color: white;
+font-size: 2.2rem;
+margin: 25px 0;
 }
 
 .offer-price {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 18px;
+margin-bottom: 25px;
 }
 
 .old-price {

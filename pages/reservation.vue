@@ -157,9 +157,9 @@ background:
 }
 
 .container {
-position:relative;
-max-width:1200px;
-margin:auto;
+position: relative;
+max-width: 1200px;
+margin: auto;
 }
 
 .hero {
@@ -172,6 +172,7 @@ color: $primary-light;
 letter-spacing: 3px;
 text-transform: uppercase;
 font-size: .9rem;
+font-weight: 700;
 }
 
 .hero h1 {
@@ -305,14 +306,15 @@ padding: 45px;
 }
 
 .terms-card h2 {
-color:white;
-margin:15px 0;
+color: white;
+margin: 15px 0;
 }
 
 .intro {
 color: #c9c9c9;
 line-height: 1.8;
 margin-bottom: 25px;
+font-weight: 700;
 }
 
 .terms-card ul {

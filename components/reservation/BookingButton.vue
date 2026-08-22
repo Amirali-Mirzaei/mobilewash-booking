@@ -53,11 +53,11 @@ const bookAppointment = async () => {
       <div style="font-size:16px;line-height:1.8">
         <b>Your booking has been confirmed.</b><br><br>
 
-        📅 Your appointment has been successfully scheduled.
+         &#128197; Your appointment has been successfully scheduled.
 
         <br><br>
 
-        📞 Need to cancel or change your appointment?
+         &#128222; Need to cancel or change your appointment?
         Please contact us by phone.
 
         <br><br>

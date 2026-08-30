@@ -14,7 +14,7 @@
            </div>
 
             <p>
-              Professional exterior cleaning at your location. 
+              Professional cleaning at your location. 
               Fast, convenient, and eco-friendly.
             </p>
 

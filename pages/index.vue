@@ -89,7 +89,6 @@ background-size: cover;
 width: 100%;
 height: auto;
 margin-top: 6%;
-border-bottom: 2px solid $primary;
 }
 
 h1 {
@@ -135,7 +134,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 border-radius: 50%;
-background: $primary;
+background: linear-gradient(to right, $primary, $primary-deep);
 color: white;
 font-size: 26px;
 font-weight: bold;

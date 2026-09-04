@@ -2,7 +2,6 @@
   <header class="header">
     <div class="header-bg">
      </div>
-
       <div class="container">
        <div class="logo">
          <div class="logo-text">
@@ -18,12 +17,10 @@
          </p>
 
         </div>
-
       </div>
 
 
       <nav class="nav">
-
         <NuxtLink to="/" :class="['nav-item', { active: isActive('/') }]">
           <Icon
             name="lucide:house"
@@ -39,11 +36,9 @@
           />
           <span>Contact</span>
         </NuxtLink>
-
       </nav>
 
       <div class="right-side">
-
         <NuxtLink to="/reservation" class="booking-btn">
           <Icon
             name="lucide:calendar-days"
@@ -134,7 +129,10 @@ color:white;
 }
 
 .logo-text h1 span {
-color: $primary;
+ background: linear-gradient(135deg, $primary, $primary-deep);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .logo-text p {
@@ -179,7 +177,7 @@ align-items:center;
 gap:18px;
 }
 
-.booking-btn{
+.booking-btn {
 text-decoration: none;
 position: relative;
 overflow: hidden;
@@ -196,14 +194,12 @@ letter-spacing:.5px;
 cursor:pointer;
 background:
     linear-gradient(
-        135deg,
-        $primary-light 0%,
+        to right,
+        $primary 0%,
         $primary 35%,
-        $primary 100%
+        $primary-deep 100%
     );
 transition:.35s;
-box-shadow:
-0 12px 30px rgba(255,196,0,.35);
 }
 
 .booking-btn span {
@@ -214,9 +210,7 @@ white-space:nowrap;
 transform:
 translateY(-3px)
 scale(1.02);
-box-shadow:
-  0 0 25px rgba(255,208,0,.55),
-    0 20px 60px rgba(255,208,0,.35);
+box-shadow: 0 12px 30px rgba(27, 203, 247, 0.35);
 }
 
 .shine {
@@ -264,8 +258,7 @@ translateX(6px);
 content: "";
 position: absolute;
 inset: 0;
-border-bottom:
-1px solid rgba(255,210,0,.15);
+border-bottom: 1px solid rgba(27, 203, 247, 0.22);
 pointer-events:none;
 }
 
@@ -278,13 +271,12 @@ pointer-events:none;
     width: 500px;
     height: 80px;
     background:
-    radial-gradient(
-        ellipse,
-        rgba(255,200,0,.22),
-        transparent 70%
+   radial-gradient(
+      ellipse,
+    rgba(27, 203, 247, 0.22),
+      transparent 70%
     );
-
-    filter:blur(40px);
+    filter: blur(40px);
     pointer-events:none;
 }
 
@@ -414,15 +406,25 @@ box-shadow:
     width:18px;
   }
 
-  .booking-btn{
-    width: 130px;
+   .booking-btn{
+    width:auto;
     height:40px;
     padding:0 12px;
+    gap:7px;
+    font-size:.7rem;
+  }
+
+  .booking-btn span{
+    display:block;
+  }
+
+  .booking-btn svg:first-child{
+    display:block;
+    width:18px;
   }
 
   .booking-btn svg:last-child{
     display:none;
   }
-
 }
 </style>

@@ -155,7 +155,7 @@ input,
 textarea {
 width:100%;
 background:rgba(255,255,255,.05);
-border:1px solid rgba(212,175,55,.15);
+border: 1px solid rgba(27, 203, 247, 0.22);
 border-radius:16px;
 padding:16px;
 color:white;
@@ -167,7 +167,7 @@ font-size:15px;
 input:focus,
 textarea:focus{
 border-color: $primary;
-box-shadow:0 0 18px rgba(212,175,55,.3);
+border: 1px solid rgba(27, 203, 247, 0.22);
 }
 
 .valid {

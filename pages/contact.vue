@@ -102,8 +102,8 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(27, 203, 247, 0.06);
+  border: 1px solid rgba(27, 203, 247, 0.22);
   backdrop-filter: blur(18px);
   border-radius: 26px;
   padding: 45px;
@@ -116,8 +116,7 @@
   &:hover {
     transform: translateY(-12px);
     border-color: $primary;
-    box-shadow:
-      0 20px 60px rgba(212, 175, 55, .18);
+    box-shadow: 0 20px 60px rgba(27, 203, 247, 0.18);
   }
 
   h2 {
@@ -164,8 +163,7 @@
 
 .card:hover .icon-wrapper {
   transform: rotate(-8deg) scale(1.08);
-
-  box-shadow: 0 0 35px rgba(212, 175, 55, .45);
+  box-shadow: 0 0 35px rgba(27, 203, 247, 0.45);
 }
 
 .card:hover svg {
@@ -197,6 +195,7 @@
 
 @media (max-width: 768px) {
   .heading {
+    margin-top: 20px;
     margin-bottom: 50px;
   }
 

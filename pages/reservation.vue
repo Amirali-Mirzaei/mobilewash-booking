@@ -151,9 +151,9 @@ padding: 140px 20px 80px;
 position: absolute;
 inset: 0;
 background:
- radial-gradient(circle at top left,#D4AF3725,transparent 40%),
- radial-gradient(circle at bottom right,#D4AF3715,transparent 35%);
- filter:blur(80px);
+  radial-gradient(circle at top left, #1BCBF725, transparent 40%),
+  radial-gradient(circle at bottom right, #1BCBF715, transparent 35%);
+filter: blur(80px);
 }
 
 .container {
@@ -197,7 +197,7 @@ font-weight: 700;
 .booking-card {
 backdrop-filter: blur(25px);
 background: rgba(255,255,255,.04);
-border: 1px solid rgba(212,175,55,.2);
+border: 1px solid rgba(27, 203, 247, 0.22);
 border-radius: 30px;
 padding: 40px;
 display: grid;
@@ -300,7 +300,7 @@ max-height: 85vh;
 overflow-y: auto;
 background: rgba(15,15,15,.95);
 backdrop-filter: blur(25px);
-border: 1px solid rgba(212,175,55,.25);
+border: 1px solid rgba(27, 203, 247, 0.22);
 border-radius: 28px;
 padding: 45px;
 }

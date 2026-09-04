@@ -228,10 +228,13 @@ pointer-events: none;
 }
 
 .active {
-background: $primary;
+background: linear-gradient(135deg, $primary, $primary-deep);
 color: $secondry;
 font-weight: 700;
-box-shadow: 0 0 25px rgba(212,175,55,.55);
+border: transparent;
+box-shadow:
+    0 0 20px rgba(27, 203, 247, 0.45),
+    0 0 40px rgba(5, 98, 127, 0.3);
 }
 
 .calendar-header button:disabled {

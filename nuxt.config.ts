@@ -74,7 +74,7 @@ export default defineNuxtConfig({
         },
         {
           name: "theme-color",
-          content: "#D4AF37",
+          content: "#1BCBF7",
         },
         {
           property: "og:type",

@@ -161,14 +161,14 @@ border-radius: 18px;
 cursor: pointer;
 font-size: 18px;
 font-weight: 700;
-background: $primary;
-color: #111;
+background: linear-gradient(135deg, $primary, $primary-deep);
+color: #050D12;
 transition: .35s;
 }
 
 .booking-btn:hover:not(:disabled) {
 transform: translateY(-5px);
-box-shadow: 0 0 35px rgba(212, 175, 55, .45);
+box-shadow: 0 0 35px rgba(27, 203, 247, 0.45);
 }
 
 .booking-btn:disabled {

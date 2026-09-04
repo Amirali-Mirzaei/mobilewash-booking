@@ -1,3 +1,4 @@
+import { Icon } from '../.nuxt/components';
 <template>
   <footer class="footer">
     <div class="footer-content">
@@ -125,14 +126,17 @@ color: $text-dark;
 
 
 
-@media(max-width:768px){
+@media(max-width: 600px){
 
 .footer-content {
-
-grid-template-columns: 1fr;
-
+  grid-template-columns: 1fr;
 }
 
+ .contact p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+  }
 }
-
 </style>

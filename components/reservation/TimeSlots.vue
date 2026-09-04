@@ -70,25 +70,28 @@ gap: 15px;
 }
 
 .slot {
-height: 60px;
-border-radius: 16px;
-background: rgba(255,255,255,.04);
-border: 1px solid rgba(212,175,55,.18);
-color: white;
-transition: .35s;
-font-weight: 600;
-cursor: pointer;
-}
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid transparent;
+  color: white;
+  font-weight: 600;
+  transition: 0.35s;
+  cursor: pointer;
 
-.slot:hover {
-transform: translateY(-4px);
-border-color: $primary;
-box-shadow: 0 0 18px rgba(212,175,55,.25);
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $primary;
+  }
 }
 
 .active {
-background: $primary;
+background: linear-gradient(135deg, $primary, $primary-deep);
 color: $secondry;
-box-shadow: 0 0 25px rgba(212,175,55,.5);
+font-weight: 700;
+border: transparent;
+box-shadow:
+    0 0 20px rgba(27, 203, 247, 0.45),
+    0 0 40px rgba(5, 98, 127, 0.3);
 }
 </style>

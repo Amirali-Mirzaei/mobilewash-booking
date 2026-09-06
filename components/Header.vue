@@ -389,7 +389,7 @@ box-shadow:
   }
 
    .logo-text p {
-    font-size: 0.3rem;
+    display: none;
    }
 
   .nav{
@@ -399,7 +399,7 @@ box-shadow:
   .nav-item{
     width:55px;
     height:60px;
-    font-size:.7rem;
+    font-size:.6rem;
   }
 
   .nav-item svg{
@@ -407,11 +407,11 @@ box-shadow:
   }
 
    .booking-btn{
-    width:auto;
+    width:165px;
     height:40px;
-    padding:0 12px;
+    padding:0 10px;
     gap:7px;
-    font-size:.7rem;
+    font-size:.5rem;
   }
 
   .booking-btn span{
@@ -420,7 +420,7 @@ box-shadow:
 
   .booking-btn svg:first-child{
     display:block;
-    width:18px;
+    width:15px;
   }
 
   .booking-btn svg:last-child{

@@ -141,9 +141,9 @@
   height: 90px;
   border-radius: 25px;
   background: linear-gradient(
-    135deg,
+    to right,
     $primary,
-    $primary-light
+    $primary-deep
   );
 
   display: flex;

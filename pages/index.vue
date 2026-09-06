@@ -277,7 +277,7 @@ box-shadow:
 display: inline-block;
 padding: 8px 18px;
 border-radius: 999px;
-background: $primary;
+background: linear-gradient(to right, $primary, $primary-deep);
 color: black;
 font-size: .90rem;
 font-weight: 800;
@@ -348,7 +348,7 @@ transition: .35s;
     font-size: 25px;
     margin-top: 15%;
   }
-
+  
   .cards {
     flex-direction: column;
     gap: 20px;

@@ -352,17 +352,16 @@ margin-top: 30px;
 padding: 18px;
 border: none;
 border-radius: 14px;
-background: $primary;
+background: linear-gradient(135deg, $primary, $primary-deep);
 color: $secondry;
 font-size: 1rem;
 font-weight: 700;
-transition: .35s;
+transition: .35s all;
 cursor: pointer;
 }
 
 .continue-btn:hover:not(:disabled) {
 transform: translateY(-3px);  
-background: $primary-hover;
 }
 
 .continue-btn:disabled {

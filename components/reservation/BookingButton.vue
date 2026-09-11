@@ -62,13 +62,13 @@ const bookAppointment = async () => {
 
         <br><br>
 
-        <span style="color:#D4AF37;font-weight:700">
+        <span style="color:#050D12;font-weight:700">
         We look forward to serving you!
         </span>
       </div>
   `,
   confirmButtonText: "Done",
-  confirmButtonColor: "#D4AF37",
+  confirmButtonColor: "#1BCBF7",
   background: "#181818",
   color: "#fff",
   width: 500,
@@ -103,7 +103,7 @@ const bookAppointment = async () => {
         title: "Time Slot Unavailable",
         text: "This time slot has already been booked. Please choose another available time.",
         confirmButtonText: "OK",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#1BCBF7",
         background: "#181818",
         color: "#fff",
       });
@@ -115,7 +115,7 @@ const bookAppointment = async () => {
         title: "Please Wait",
         text: "Please wait a few seconds before booking again.",
         confirmButtonText: "OK",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#1BCBF7",
         background: "#181818",
         color: "#fff",
       });
@@ -127,7 +127,7 @@ const bookAppointment = async () => {
         title: "Invalid Information",
         text: "Please check your booking information and try again.",
         confirmButtonText: "OK",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#1BCBF7",
         background: "#181818",
         color: "#fff",
       });
@@ -139,7 +139,7 @@ const bookAppointment = async () => {
         title: "Booking Failed",
         text: message || "Something went wrong. Please try again later.",
         confirmButtonText: "OK",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#1BCBF7",
         background: "#181818",
         color: "#fff",
       });

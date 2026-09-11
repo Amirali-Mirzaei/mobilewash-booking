@@ -9,8 +9,8 @@
             <h2>SAVE $5 BY BOOKING THROUGH THE WEBSITE</h2>
 
            <div class="offer-price">
-             <span class="old-price">$35</span>
-              <span class="new-price">$30</span>
+             <span class="old-price">$45</span>
+              <span class="new-price">$40</span>
            </div>
 
             <p>
@@ -357,8 +357,8 @@ transition: .35s;
   }
 
   .cards-container {
-    width: 30vh;
-    height: 35vh;
+    width: 25vh;
+    height: 25vh;
     min-width: unset;
     margin-top: 9%;
   }
@@ -396,17 +396,17 @@ transition: .35s;
   }
     
   #one {
-    background-size: 60vh;
+    background-size: 48vh;
     height: inherit;
   }
 
   #two {
-    background-size: 45vh;
+    background-size: 33vh;
     height: inherit;
   }
 
   #three {
-    background-size: 55vh;
+    background-size: 40vh;
     height: inherit;
   }
 

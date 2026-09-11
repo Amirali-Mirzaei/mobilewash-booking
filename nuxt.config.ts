@@ -14,6 +14,14 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
   ],
 
+  icon: {
+  mode: "local",
+
+   serverBundle: {
+     collections: ["lucide"],
+   },
+ },
+
   css: [
     "@/assets/styles/main.scss",
   ],

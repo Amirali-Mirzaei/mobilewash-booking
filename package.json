@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/lucide": "^1.2.131",
     "@nuxt/icon": "^2.2.4",
     "@nuxtjs/sitemap": "^8.2.2",
     "mongoose": "^8.18.1",

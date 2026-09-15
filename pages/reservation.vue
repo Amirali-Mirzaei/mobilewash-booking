@@ -207,6 +207,7 @@ gap: 35px;
 .section h2 {
 color: white;
 margin-bottom: 20px;
+font-weight: bold;
 }
 
 .placeholder {

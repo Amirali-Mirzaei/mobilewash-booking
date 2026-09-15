@@ -100,16 +100,19 @@ margin-top: 8%;
 .cards {
 display: flex;
 align-items: center;
+justify-content: center;
 gap: 30px;
-margin: 5% 0 0 19%;
+margin: 5% auto 0;
 width: 90%;
+max-width: 1200px;
 }
 
 .cards-container {
 position: relative;
-height: 35vh;
-width: 30vh;
-min-width: 220px;
+width: 30%;
+aspect-ratio: 1 / 1;
+max-width: 300px;
+min-width: 0;
 border: 3px solid $primary;
 border-radius: 15%;
 transition: all .35s;
@@ -156,19 +159,19 @@ border-radius: inherit;
 #one {
 background-image: url("@/assets/images/First.png");
 background-position: 50% 45%;
-background-size: 200%;
+background-size: 190%;
 }
 
 #two {
 background-image: url("@/assets/images/Second.png");
 background-position: 50% 40%;
-background-size: 150%;
+background-size: 130%;
 }
 
 #three {
 background-image: url("@/assets/images/Third.png");
 background-position: 50% 48%;
-background-size: 190%;
+background-size: 165%;
 }
 
 .cta-section {

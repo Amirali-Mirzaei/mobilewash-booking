@@ -51,11 +51,13 @@ const timeSlots = computed(() => {
 
   const day = booking.value.date.getDay();
 
+  // Sunday, Monday, Friday
   if (day === 0 || day === 1 || day === 5) {
-    return generateSlots(8, 20);
+    return generateSlots(10, 19);
   }
 
-  return generateSlots(16, 20);
+  // Tuesday, Wednesday, Thursday, Saturday
+  return generateSlots(16, 19);
 });
 
 const timeToMinutes = (time: string): number => {
@@ -240,12 +242,10 @@ watch(
     135deg,
     $primary,
     $primary-deep
-  );
-
+  ); 
+  font-weight: bold;
   color: $secondry;
-  font-weight: 700;
   border: transparent;
-
   box-shadow:
     0 0 20px rgba(27, 203, 247, 0.45),
     0 0 40px rgba(5, 98, 127, 0.3);

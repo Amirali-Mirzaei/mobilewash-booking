@@ -9,8 +9,8 @@
             <h2>SAVE $5 BY BOOKING THROUGH THE WEBSITE</h2>
 
            <div class="offer-price">
-             <span class="old-price">$45</span>
-              <span class="new-price">$40</span>
+             <span class="old-price">$50</span>
+              <span class="new-price">$45</span>
            </div>
 
             <p>

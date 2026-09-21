@@ -144,8 +144,8 @@ const isSlotDisabled = (slot: string): boolean => {
     const bookedStart = timeToMinutes(bookedTime);
 
     return (
-      slotStart >= bookedStart &&
-      slotStart <= bookedStart + 60
+      slotStart >= bookedStart - 90 &&
+      slotStart <= bookedStart + 90
     );
   });
 };
@@ -241,7 +241,7 @@ watch(
   background: linear-gradient(
     135deg,
     $primary,
-    $primary-deep
+    $primary-dark
   ); 
   font-weight: bold;
   color: $secondry;

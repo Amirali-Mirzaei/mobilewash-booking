@@ -228,7 +228,7 @@ pointer-events: none;
 }
 
 .active {
-background: linear-gradient(135deg, $primary, $primary-deep);
+background: linear-gradient(135deg, $primary, $primary-dark);
 color: $secondry;
 font-weight: 700;
 border: transparent;

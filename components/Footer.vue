@@ -60,7 +60,7 @@ import { Icon } from '../.nuxt/components';
 .footer {
 width: 100%;
 padding: 60px 8% 20px;
-background: linear-gradient(to right, $primary, $primary-deep);
+background: linear-gradient(to right, $primary-light, $primary-dark);
 color: white;
 overflow: hidden;
 }

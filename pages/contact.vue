@@ -143,7 +143,7 @@
   background: linear-gradient(
     to right,
     $primary,
-    $primary-deep
+    $primary-dark
   );
 
   display: flex;

@@ -353,7 +353,7 @@ margin-top: 30px;
 padding: 18px;
 border: none;
 border-radius: 14px;
-background: linear-gradient(135deg, $primary, $primary-deep);
+background: linear-gradient(135deg, $primary, $primary-dark);
 color: $secondry;
 font-size: 1rem;
 font-weight: 700;

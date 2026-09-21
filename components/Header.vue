@@ -129,7 +129,7 @@ color:white;
 }
 
 .logo-text h1 span {
- background: linear-gradient(135deg, $primary, $primary-deep);
+ background: linear-gradient(135deg, $primary, $primary-dark);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -197,7 +197,7 @@ background:
         to right,
         $primary 0%,
         $primary 35%,
-        $primary-deep 100%
+        $primary-dark 100%
     );
 transition:.35s;
 }

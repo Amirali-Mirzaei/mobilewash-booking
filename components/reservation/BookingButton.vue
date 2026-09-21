@@ -161,7 +161,7 @@ border-radius: 18px;
 cursor: pointer;
 font-size: 18px;
 font-weight: 700;
-background: linear-gradient(135deg, $primary, $primary-deep);
+background: linear-gradient(135deg, $primary, $primary-dark);
 color: #050D12;
 transition: .35s;
 }

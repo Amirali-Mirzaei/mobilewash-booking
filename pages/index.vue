@@ -8,10 +8,23 @@
            <span class="offer-badge">SPECIAL OFFER</span>
             <h2>SAVE $5 BY BOOKING THROUGH THE WEBSITE</h2>
 
-           <div class="offer-price">
-             <span class="old-price">$50</span>
-              <span class="new-price">$45</span>
-           </div>
+        <div class="offer-price">
+         <div class="price-item">
+           <span class="car-type">SUV</span>
+          <div class="price-values">
+           <span class="old-price">$50</span>
+           <span class="new-price">$45</span>
+          </div>
+         </div>
+
+         <div class="price-item">
+           <span class="car-type">Sedan</span>
+         <div class="price-values">
+           <span class="old-price">$45</span>
+           <span class="new-price">$40</span>
+         </div>
+        </div>
+      </div>
 
             <p>
               Professional cleaning at your location. 
@@ -121,7 +134,6 @@ align-items: center;
 justify-content: center;
 
   &:hover {
-    border-color: $primary-hover;
     transform: translateY(-5px);
   }
 }
@@ -137,7 +149,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 border-radius: 50%;
-background: linear-gradient(to right, $primary, $primary-deep);
+background: linear-gradient(to right, $primary, $primary-dark);
 color: white;
 font-size: 26px;
 font-weight: bold;
@@ -224,27 +236,6 @@ padding: 30px;
   }
 }
 
-.cta-btn {
-background: $primary;
-color: black;
-border: none;
-padding: 15px 35px;
-border-radius: 50px;
-font-size: 18px;
-font-weight: 700;
-cursor: pointer;
-display: inline-flex;
-align-items: center;
-gap: 10px;
-transition: .35s;
-text-decoration: none;
-
-&:hover {
-   background: $primary-hover;
-   transform: translateY(-5px);
-  }
-}
-
 .offer-card {
 width: min(900px, 90%);
 margin: 9% auto 5%;
@@ -280,38 +271,72 @@ box-shadow:
 display: inline-block;
 padding: 8px 18px;
 border-radius: 999px;
-background: linear-gradient(to right, $primary, $primary-deep);
+background: linear-gradient(to left, $primary, $primary-light);
 color: black;
-font-size: .90rem;
-font-weight: 800;
+font-size: 1.8vh;
+font-weight: 700;
 letter-spacing: 1px;
 }
 
 .offer-card h2 {
 color: white;
-font-size: 2.2rem;
+font-size: 3vh;
 margin: 25px 0;
 }
 
 .offer-price {
 display: flex;
 justify-content: center;
-align-items: center;
-gap: 18px;
+align-items: stretch;
+gap: 35px;
 margin-bottom: 25px;
+}
+
+.price-item {
+min-width: 220px;
+padding: 20px 30px;
+border-radius: 15px;
+border: 1px solid rgba($primary, .45);
+background: $secondry;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transition: .35s;
+
+  &:hover {
+  transform: translateY(-4px);
+  border-color: $primary;
+  box-shadow: 0 0 25px rgba($primary, .18);
+  }
+}
+
+.car-type {
+color: white;
+font-size: 1.3rem;
+font-weight: 800;
+margin-bottom: 10px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.price-values {
+display: flex;
+align-items: center;
+gap: 14px;
 }
 
 .old-price {
 color: #9b9b9b;
-font-size: 2rem;
+font-size: 1.7rem;
 text-decoration: line-through;
 }
 
 .new-price {
 color: $primary;
-font-size: 3.6rem;
+font-size: 2.8rem;
 font-weight: 800;
-text-shadow: 0 0 18px rgba($primary,.45);
+text-shadow: 0 0 18px rgba($primary, .45);
 }
 
 .offer-card p {
@@ -329,14 +354,13 @@ align-items: center;
 gap: 10px;
 padding: 15px 34px;
 border-radius: 50px;
-background: $primary;
+background: linear-gradient(to left, $primary, $primary-light);
 color: black;
 font-weight: 700;
 text-decoration: none;
 transition: .35s;
 
   &:hover {
-    background: $primary-hover;
     transform: translateY(-4px);
   }
 }
@@ -392,11 +416,6 @@ transition: .35s;
       font-size: 15px;
     }
   }
-
-  .cta-btn {
-    padding: 13px 28px;
-    font-size: 16px;
-  }
     
   #one {
     background-size: 48vh;
@@ -421,17 +440,38 @@ transition: .35s;
   .offer-card h2 {
     font-size: 1.6rem;
   }
+  
+  .offer-price {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .price-item {
+    width: 100%;
+    min-width: unset;
+    max-width: 280px;
+    padding: 18px 20px;
+  }
+
+  .price-values {
+    gap: 10px;
+  }
 
   .old-price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .new-price {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 
   .offer-card p {
     font-size: 15px;
+  }
+
+  .offer-btn {
+    padding: 12px 28px;
   }
 }
 </style>

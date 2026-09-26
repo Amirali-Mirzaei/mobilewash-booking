@@ -101,7 +101,7 @@ import banner from '@/assets/images/Banner.png'
 background-size: cover;
 width: 100%;
 height: auto;
-margin-top: 6%;
+margin-top: 3%;
 }
 
 h1 {
